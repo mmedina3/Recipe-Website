@@ -1,0 +1,68 @@
+$standard-border: 4px solid black;
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+
+@mixin transform($transformation) {
+  transform: $transformation;
+  -webkit-transform: $transformation;
+  -moz-transform: $transformation;
+  -ms-transform: $transformation;
+  -o-transform: $transformation;
+}
+
+@mixin transition($time){
+  transition: $time;
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+}
+
+center {
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  float: center;
+  position: relative;
+  overflow: auto;
+  font-family: 'Nothing You Could Do', cursive;
+
+  border : {
+  top: 4px solid yellow;
+  bottom: 4px solid yellow;
+}
+}
+
+/*top part of the screen*/
+
+section {
+  border-bottom: 4px solid yellow;
+  width: 45%;
+  left: 5%;
+  right: 5%;
+  float: left;
+  position: relative;
+  overflow: auto;
+  font-family: 'Josefin Slab', serif;
+}
+
+/*Left part of the screen*/
+
+aside {
+  border-bottom: 4px solid yellow;
+  width: 40%;
+  left: 5%;
+  float: right;
+  margin-right: 10%;
+  position: relative;
+  overflow: auto;
+  font-family: 'Josefin Slab', serif;
+}
+
+/*right side of the screen*/
+
+img {
+  border-radius: 50px;
+   @include transition(0.8s);
+  &:hover{
+  @include transform (rotatey(-180deg));
+}
+}
